@@ -34,7 +34,8 @@
 
         <header data-role="header">
             <ul data-role="tabs">
-                <li data-role="tabitem" data-page="hello-page">Project Title</li>
+                <li data-role="tabitem" data-page="hello-page">Strona glowna/li>
+                <li data-role="tabitem" data-page="settings-page">Ustawienia</li>
             </ul>
         </header>
 
@@ -44,10 +45,16 @@
             <div data-role="tab" id="hello-page">
             <!-- Start of Block - Replace this block with your own code -->
 
-                <header class="title large-font" id="hello-label">Hello...</header>
+                <header class="title large-font" id="hello-label">Strona główna</header>
 
                 <button class="button negative" data-role="button" id="hello-button" onclick=>Tap me!</button>
 
+            </div>
+            <!-- End of Block-->
+
+            <!-- The application setting page -->
+            <div data-role="tab" id="settings-page">
+                <header class="title large-font" id="hello-label">Ustawienia</header>
             </div>
             <!-- End of Block-->
 
@@ -58,4 +65,3 @@
     <script src="js/ui.js"></script>
 </body>
 </html>
-
