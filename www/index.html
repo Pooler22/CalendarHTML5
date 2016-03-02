@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8">
     <title>An Ubuntu HTML5 application</title>
     <meta name="description" content="An Ubuntu HTML5 application">
@@ -10,14 +10,14 @@
          Application stylesheets
          Include your own stylesheets below to style your application.
       -->
-    <link rel="stylesheet" href="css/app.css" type="text/css" />
+    <link rel="stylesheet" href="css/app.css" type="text/css"/>
 
     <!--
         Ubuntu UI javascript imports - Ambiance theme
         Ubuntu provides building blocks that you can use in your application. For more information, you can check out the documentation at http://design.ubuntu.com/apps.
      -->
     <!-- Ubuntu UI Style imports - Ambiance theme -->
-    <link href="/usr/share/ubuntu-html5-ui-toolkit/0.1/ambiance/css/appTemplate.css" rel="stylesheet" type="text/css" />
+    <link href="/usr/share/ubuntu-html5-ui-toolkit/0.1/ambiance/css/appTemplate.css" rel="stylesheet" type="text/css"/>
 
     <script src="/usr/share/ubuntu-html5-ui-toolkit/0.1/ambiance/js/fast-buttons.js"></script>
     <script src="/usr/share/ubuntu-html5-ui-toolkit/0.1/ambiance/js/core.js"></script>
@@ -27,49 +27,66 @@
     <script src="/usr/share/ubuntu-html5-ui-toolkit/0.1/ambiance/js/pagestacks.js"></script>
     <script src="/usr/share/ubuntu-html5-ui-toolkit/0.1/ambiance/js/tab.js"></script>
     <script src="/usr/share/ubuntu-html5-ui-toolkit/0.1/ambiance/js/tabs.js"></script>
-</head>
-<body>
+  </head>
+  <body>
 
     <div data-role="mainview">
 
-        <header data-role="header">
-            <ul data-role="tabs">
-                <li data-role="tabitem" data-page="main-page">Kalendarz intymny</li>
-                <li data-role="tabitem" data-page="month-page">Widok miesiąca</li>
-                <li data-role="tabitem" data-page="timeline-page">Oś czasu</li>
-                <li data-role="tabitem" data-page="statistics-page">Statystyki</li>
+      <header data-role="header">
+        <ul data-role="tabs">
+          <li data-role="tabitem" data-page="main-page">Kalendarz intymny</li>
+          <li data-role="tabitem" data-page="month-page">Widok miesiąca</li>
+          <li data-role="tabitem" data-page="timeline-page">Oś czasu</li>
+          <li data-role="tabitem" data-page="statistics-page">Statystyki</li>
+        </ul>
+      </header>
+
+      <div data-role="content">
+
+        <div data-role="tab" id="main-page">
+          <img src="./img/cordova.png">
+
+          <button data-role="button" id="set-period" >Poczatek okresu</button>
+
+          <div data-role='dialog' id='dialog-period'>
+            <input type="text" id="word">Enter a word</input>
+            <button data-role="button" id='hide-dialog-period'>Zapisz</button>
+            <button data-role="button" id='hide-dialog-period'>Anuluj</button>
+          </div>
+
+          <button data-role="button" >Opisz swój dzień</button>
+
+          <section data-role="option-selector">
+            <ul>
+              <li data-value="0">
+                <p>Label 1</p>
+                <img src=”./back.png”/>
+              </li>
+              <li data-value="1">
+                <p>Label 2</p>
+              </li>
+              <li data-value="3">
+                <p>Label 3</p>
+              </li>
             </ul>
-        </header>
-
-        <div data-role="content">
-
-            <div data-role="tab" id="main-page">
-                <header class="title large-font" id="hello-label">Strona główna</header>
-                <button class="button negative" data-role="button" id="hello-button" onclick=>Tap me!</button>
-            </div>
-
-            <div data-role="tab" id="timeline-page">
-                <header class="title large-font" id="hello-label">Oś czasu</header>
-            </div>
-
-            <div data-role="tab" id="statistics-page">
-                <header class="title large-font" id="hello-label">Statystyki</header>
-            </div>
-
-            <div data-role="tab" id="settings-page">
-                <header class="title large-font" id="hello-label">Ustawienia</header>
-            </div>
-
-            <!-- The application setting page -->
-            <div data-role="tab" id="settings-page">
-                <header class="title large-font" id="hello-label">Ustawienia</header>
-            </div>
-            <!-- End of Block-->
-
+          </section>
         </div>
+
+        <div data-role="tab" id="timeline-page">
+        </div>
+
+        <div data-role="tab" id="statistics-page">
+        </div>
+
+        <div data-role="tab" id="settings-page">
+        </div>
+
+        <!-- End of Block-->
+
+      </div>
     </div>
 
     <script src="js/application.js"></script>
     <script src="js/ui.js"></script>
-</body>
+  </body>
 </html>
