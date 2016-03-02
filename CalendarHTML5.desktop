@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=CalendarHTML5
+Exec=webapp-container --inspector ./www/index.html
+Icon=CalendarHTML5.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
+

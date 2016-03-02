@@ -1,0 +1,17 @@
+{
+    "name": "calendarhtml5.username",
+    "description": "description of CalendarHTML5",
+    "architecture": "all",
+    "title": "CalendarHTML5",
+    "hooks": {
+        "CalendarHTML5": {
+            "apparmor": "CalendarHTML5.apparmor",
+            "desktop":  "CalendarHTML5.desktop"
+        }
+    },
+    "version": "0.1",
+    "maintainer": "Firstname Surname <your@mail.com>",
+    "framework" : "ubuntu-sdk-15.04.4"
+}
+
+
